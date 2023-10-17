@@ -1,0 +1,8 @@
+<div class="contenedor">
+    <h1>Bienvenido al buscador que autosugiere</h1>
+    <input type="text" id="buscador" name="nombre" placeholder="Escribe lo que quieras" (input)="onInputChange($event)">
+    <div *ngIf="lista" class="contenedor-resultados">
+        <div class="resultado" *ngFor="let item of lista" (click)="seleccionarItem(item)">{{ item }}</div>  
+    </div>
+    
+</div>
